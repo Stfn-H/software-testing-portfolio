@@ -47,7 +47,8 @@
 |---|---|---|---|---|---|
 | 1 | Navigate to a purchased product page | Product detail page is displayed | OK | /product/66b3a57b3fd5048eacb4799b| |
 | 2 | Select 4 stars and enter text feedback | Stars selected, text visible in field | OK | /product/66b3a57b3fd5048eacb4799b | |
-| 3 | Click Submit | Rating and text are both saved and displayed | NOK | /product/66b3a57b3fd5048eacb4799b | #[issue] |
+| 3 | Click Submit | Rating and text are both saved and displayed | NOK | /product/66b3a57b3fd5048eacb4799b | [#3](https://github.com/Stfn-H/software-testing-portfolio/issues/3)
+ |
 | 4 | Click Edit and re-enter the same text | Text is saved and displayed after editing | OK | /product/66b3a57b3fd5048eacb4799b | |
 
 **Before submit:** Rating form with 4 stars and written feedback entered.
@@ -59,7 +60,7 @@
 **After edit:** Both stars and text are correctly displayed after editing the review.
 ![After edit - stars and text displayed](screenshots/rating-after-edit-with-text.png)
 
-**Note:** Text is not displayed after initial submission. It only appears correctly after editing the review. See Bug #3.
+**Note:** Text is not displayed after initial submission. It only appears correctly after editing the review. See [Issue #3](https://github.com/Stfn-H/software-testing-portfolio/issues/3).
 
 ---
 
@@ -124,7 +125,7 @@
 | 1 | Enter text feedback without selecting stars | Text is entered in the field | OK | /product/66b3a57b3fd5048eacb4799b | |
 | 2 | Click Submit | Submission is blocked with error message | OK | /product/66b3a57b3fd5048eacb4799b | |
 
-**Note:** Cancel button on the rating form has no function – it does not close the form or clear the input. See Bug #9.
+**Note:** Cancel button on the rating form has no function – it does not close the form or clear the input. See [Issue #9](https://github.com/Stfn-H/software-testing-portfolio/issues/9).
 
 
 ---
@@ -137,8 +138,9 @@
 |---|---|---|---|---|---|
 | 1 | Enter text exceeding 500 characters in the initial rating form | Text is cut off at 500 characters | OK | /product/66b3a57b3fd5048eacb4799b | |
 | 2 | Submit the review, then click Edit | Edit form opens | OK | /product/66b3a57b3fd5048eacb4799b | |
-| 3 | Enter text exceeding 500 characters in the edit form | Text should be cut off at 500 characters | NOK | /product/66b3a57b3fd5048eacb4799b | #[issue] |
-| 4 | Save the review | Text over 500 characters is saved and displayed | NOK | /product/66b3a57b3fd5048eacb4799b | #[issue] |
+| 3 | Enter text exceeding 500 characters in the edit form | Text should be cut off at 500 characters | NOK | /product/66b3a57b3fd5048eacb4799b | [#4](https://github.com/Stfn-H/software-testing-portfolio/issues/4)
+ |
+| 4 | Save the review | Text over 500 characters is saved and displayed | NOK | /product/66b3a57b3fd5048eacb4799b | [#4](https://github.com/Stfn-H/software-testing-portfolio/issues/4) |
 
 **Edit form:** Text field during editing showing input exceeding 500 characters with no character counter or restriction visible.
 ![Edit form showing text over 500 characters](screenshots/rating-edit-over-500-chars.png)
@@ -146,7 +148,7 @@
 **Saved review:** The review is saved and displayed with text exceeding the 500-character limit.
 ![Saved review displaying text over 500 characters](screenshots/rating-saved-over-500-chars.png)
 
-**Note:** The 500-character limit is enforced on initial submission but not when editing. See Bug #4.
+**Note:** The 500-character limit is enforced on initial submission but not when editing. See [Issue #4](https://github.com/Stfn-H/software-testing-portfolio/issues/4).
 
 ---
 
@@ -214,11 +216,11 @@
 | Step# | Action | Expected Outcome | OK/NOK | URL | Link to Issue |
 |---|---|---|---|---|---|
 | 1 | Navigate to the shop | Age verification modal appears | OK | /store | |
-| 2 | Enter "ab-cd-efgh" in the date field | Input is rejected or an error message is displayed indicating invalid format. | NOK | /store | #[issue] |
+| 2 | Enter "ab-cd-efgh" in the date field | Input is rejected or an error message is displayed indicating invalid format. | NOK | /store | [#6](https://github.com/Stfn-H/software-testing-portfolio/issues/6) |
 | 3 | Click Confirm | Access is denied | OK | /store |  |
 
 
-**Note:** No specific error message is shown for invalid input format – the user receives the same response as an underage user, with no indication that the format was wrong. See Bug #6.
+**Note:** No specific error message is shown for invalid input format – the user receives the same response as an underage user, with no indication that the format was wrong. See [Issue #6](https://github.com/Stfn-H/software-testing-portfolio/issues/6).
 
 ---
 
@@ -229,11 +231,11 @@
 | Step# | Action | Expected Outcome | OK/NOK | URL | Link to Issue |
 |---|---|---|---|---|---|
 | 1 | Copy a direct URL to an alcoholic product page | URL is copied | OK | | |
-| 2 | Paste the URL directly into the browser | Age verification modal should appear | NOK | /product/66b3a57b3fd5048eacb47a8b | #[issue] |
-| 3 | Verify product page is accessible without age check | Product page loads without any age verification | NOK | /product/66b3a57b3fd5048eacb47a8b | #[issue] |
+| 2 | Paste the URL directly into the browser | Age verification modal should appear | NOK | /product/66b3a57b3fd5048eacb47a8b | [#8](https://github.com/Stfn-H/software-testing-portfolio/issues/8) |
+| 3 | Verify product page is accessible without age check | Product page loads without any age verification | NOK | /product/66b3a57b3fd5048eacb47a8b | [#8](https://github.com/Stfn-H/software-testing-portfolio/issues/8) |
 
 
-**Note:** The age verification modal does not appear when navigating directly to a product via a deep link. See Bug #8.
+**Note:** The age verification modal does not appear when navigating directly to a product via a deep link. See [Issue #8](https://github.com/Stfn-H/software-testing-portfolio/issues/8).
 
 ---
 
@@ -270,7 +272,7 @@
 | 1 | Add a single product worth €2.49 to cart | Cart total shows €2.49 | OK | /store | |
 | 2 | Navigate to cart | Shipping is displayed as €5.00 | OK | /checkout | |
 
-**Note:** Price was displayed as €2.5 instead of €2.50. See Bug #1.
+**Note:** Price was displayed as €2.5 instead of €2.50. See [Issue #1](https://github.com/Stfn-H/software-testing-portfolio/issues/1).
 
 ---
 
@@ -288,13 +290,13 @@
 | Step# | Action | Expected Outcome | OK/NOK | URL | Link to Issue |
 |---|---|---|---|---|---|
 | 1 | Add products until cart crosses €20 threshold | Shipping updates to €0 | OK | /checkout | |
-| 2 | Remove products until cart drops below €20 | Shipping should update back to €5 | NOK | /checkout | #[issue] |
+| 2 | Remove products until cart drops below €20 | Shipping should update back to €5 | NOK | /checkout | [#10](https://github.com/Stfn-H/software-testing-portfolio/issues/10) |
 | 3 | Reload the page | Shipping correctly shows €5 after reload | OK | /checkout | |
 
 **Shipping not updated:** Cart showing €2.50 total but still displaying €0 shipping after reducing quantity.
 ![Cart below €20 still showing €0 shipping before reload](screenshots/shipping-dynamic-update-bug.png)
 
-**Note:** Shipping cost does not update dynamically when reducing cart below the threshold. It only corrects itself after a page reload. Since checkout happens directly in the cart without a summary page, users may be able to check out with €0 shipping even when their cart is below €20. See Bug #10.
+**Note:** Shipping cost does not update dynamically when reducing cart below the threshold. It only corrects itself after a page reload. Since checkout happens directly in the cart without a summary page, users may be able to check out with €0 shipping even when their cart is below €20. See [Issue #10](https://github.com/Stfn-H/software-testing-portfolio/issues/10).
 
 ---
 
