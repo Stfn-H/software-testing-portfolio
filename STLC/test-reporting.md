@@ -319,3 +319,4 @@ The following bugs were discovered outside the planned test cases during explora
 - **Bug #2:** Products remain in the cart after a completed purchase – the cart is not cleared after checkout.
 - **Bug #5:** The date input field in the age verification modal does not auto-insert hyphens, despite the placeholder showing DD-MM-YYYY format. Entering a date without hyphens results in incorrect behavior.
 - **Bug #7:** The age verification modal accepts the birth year 1900, meaning a user claiming to be 126 years old is granted access. No upper age limit validation exists.
+- **Bug #11:** Products cannot be purchased directly from the Product Detail Page. No "Add to Cart" button is available on the PDP. See [Issue #11](https://github.com/Stfn-H/software-testing-portfolio/issues/11)
