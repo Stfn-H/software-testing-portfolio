@@ -12,8 +12,11 @@ def test_register_user(driver):
     assert driver.title == "Automation Exercise"
 
     # Handle cookie consent (not in task steps, but required for automation)
-    cookie_button = driver.find_element(By.CSS_SELECTOR, ".fc-cta-consent")
-    cookie_button.click()
+    try:
+        cookie_button = driver.find_element(By.CSS_SELECTOR, ".fc-cta-consent")
+        cookie_button.click()
+    except:
+        pass
 
     # Step 4: Click on 'Signup / Login' button
     login_link = driver.find_element(By.LINK_TEXT, "Signup / Login")
@@ -92,7 +95,8 @@ def test_register_user(driver):
 
     # Step 15: Click 'Continue' button
     continue_button = driver.find_element(By.CSS_SELECTOR, "[data-qa='continue-button']")
-    continue_button.click()
+    # Using JavaScript click to bypass ad overlays
+    driver.execute_script("arguments[0].click();", continue_button)
 
     # Step 16: Verify 'Logged in as username' is visible
     login_check = driver.find_element(By.PARTIAL_LINK_TEXT, "Logged in as")
