@@ -5,6 +5,6 @@ from selenium import webdriver
 def driver():
     # Setup: Initialize the WebDriver
     driver = webdriver.Chrome()
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(5)
     yield driver
     driver.quit()
